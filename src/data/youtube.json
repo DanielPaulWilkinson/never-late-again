@@ -1,0 +1,8 @@
+[
+  {
+    "endpoint": "https://www.googleapis.com/youtube/v3/videos",
+    "key": "AIzaSyBB9z7lLFu1LHT93riYvfWyEsyN67FhuwU",
+    "chart": "mostPopular",
+    "part": "statistics,snippet,player"
+  }
+]
