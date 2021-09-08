@@ -2,8 +2,7 @@ const axios = require("axios");
 import api from "../data/youtube.json";
 
 const getVideos = async function() {
-    return await getAllVideos(api[0]);
-  
+  return await getAllVideos(api[0]);
 };
 
 const getAllVideos = async function(api) {
