@@ -8,8 +8,7 @@ const getPosts = async function() {
     posts = posts.concat(data);
   }
 
-  posts = posts.sortBy('ups');
-
+  posts = posts.sortBy("ups");
   return posts;
 };
 
@@ -27,7 +26,7 @@ const getAllHotPosts = async function(sub) {
 
 Array.prototype.sortBy = function(p) {
   return this.slice(0).sort(function(a, b) {
-    return a[p] > b[p] ? 1 : a[p] < b[p] ? -1 : 0;
+    return a[p] > b[p] ? 1 : a[p] < b[p] ? +1 : 0;
   });
 };
 

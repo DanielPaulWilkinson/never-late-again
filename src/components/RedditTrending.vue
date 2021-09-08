@@ -14,10 +14,9 @@
       >
         <v-card>
           <v-col>
-            <v-row><v-card-title v-text="item.title"></v-card-title></v-row>
             <v-row>
-            <v-card-text>Ups {{item.ups}}</v-card-text>
-            <v-card-text>Comments {{item.num_comments}}</v-card-text>
+              <v-card-title v-text="item.title"></v-card-title>
+            <v-card-text>Ups {{item.ups}} | Comments {{item.num_comments}}</v-card-text>
             </v-row>
           </v-col>
 

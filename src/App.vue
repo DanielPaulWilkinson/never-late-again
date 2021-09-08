@@ -9,17 +9,17 @@
 
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Never Late Again</v-toolbar-title>
+      <v-toolbar-title>Trending Topics</v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            Application
+            Trending topics
           </v-list-item-title>
           <v-list-item-subtitle>
-            subtext
+            See what is trending on all socials
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -49,10 +49,9 @@ export default {
     name: "App",
     drawer: null,
     menuItems: [
-      { title: "home", icon: "mdi-view-dashboard" },
-      { title: "reddit", icon: "mdi-reddit" },
+      { title: "Dashboard", icon: "mdi-view-dashboard" },
       { title: "youtube", icon: "mdi-youtube" },
-      { title: "about", icon: "mdi-about" },
+      { title: "reddit", icon: "mdi-reddit" },
     ],
   }),
   components: {},

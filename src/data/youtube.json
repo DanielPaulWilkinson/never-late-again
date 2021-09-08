@@ -3,6 +3,16 @@
     "endpoint": "https://www.googleapis.com/youtube/v3/videos",
     "key": "AIzaSyBB9z7lLFu1LHT93riYvfWyEsyN67FhuwU",
     "chart": "mostPopular",
-    "part": "statistics,snippet,player"
+    "modifier":"Most Popular: General",
+    "part": "statistics,snippet,player",
+    "limit": 1
+  },
+  {
+    "endpoint": "https://www.googleapis.com/youtube/v3/search",
+    "key": "AIzaSyBB9z7lLFu1LHT93riYvfWyEsyN67FhuwU",
+    "chart": "28",
+    "part": "snippet",
+    "modifier":"Most Popular: Gaming",
+    "limit": 1
   }
 ]

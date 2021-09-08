@@ -1,6 +1,22 @@
 [
     { 
         "title":"AskReddit", 
-        "modifier":"hot"
+        "modifier":"hot",
+        "limit": "1"
+    },
+    { 
+        "title":"soccer", 
+        "modifier":"hot",
+        "limit": "1"
+    },
+    { 
+        "title":"Coffee", 
+        "modifier":"hot",
+        "limit": 1
+    },
+    { 
+        "title":"worldnews", 
+        "modifier":"hot",
+        "limit": 1
     }
 ]
