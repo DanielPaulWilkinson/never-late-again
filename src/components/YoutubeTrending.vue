@@ -53,7 +53,6 @@ export default {
   methods: {
     async getVideos() {
       this.items = await youtube.getVideos();
-      console.log(this.items);
     }
   },
 };
