@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row v-for="company in companies" :key="`${company}`">
+    <v-row v-for="company in companies" :key="`${company.name}`">
       <v-col class="mt-2" cols="12">
         <h1>{{company.name}}</h1>
       </v-col>
@@ -60,7 +60,6 @@ export default {
   methods: {
     async getData() {
       this.companies = await dashboard.getData();
-      console.log(this.companies)
     },
   },
 };

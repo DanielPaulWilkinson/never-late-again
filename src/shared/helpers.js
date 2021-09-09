@@ -8,7 +8,7 @@ const getYoutubeApiEndpoint = async function(youtube) {
   return `${youtube.endpoint}?key=${youtube.key}&regionCode=GB&part=${youtube.part}&chart=${youtube.chart}&maxResults=${youtube.limit}`;
 };
 
-const getResponse = async function(url) {
+const getResponse = async function (url) {
   return await axios.get(url);
 };
 

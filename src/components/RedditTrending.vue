@@ -7,7 +7,7 @@
       <v-col
         outlined
         v-for="item in items"
-        :key="`${item}`"
+        :key="`${item.title}`"
         cols="12"
         md="12"
         sm="12"
@@ -53,7 +53,6 @@ export default {
   methods: {
     async getRedditPosts() {
       this.items = await reddit.getPosts();
-      console.log(this.items);
     },
     getUrl(item) {
       return "https://www.reddit.com" + item.permalink;

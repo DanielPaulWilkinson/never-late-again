@@ -7,7 +7,7 @@
       <v-col
         outlined
         v-for="item in items"
-        :key="`${item}`"
+        :key="`${item.title}`"
         cols="12"
         md="6"
         sm="6"

@@ -12,8 +12,8 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     { path: "/", name: "dashboard", component: Dashboard },
-    { path: "/dashboard", name:"dashboard", redirect: '/' },
-    { path: "/home", name:"dashboard", redirect: '/' },
+    { path: "/dashboard", redirect: '/' },
+    { path: "/home", redirect: '/' },
     { path: "/youtube", name: "youtube", component: Home },
     { path: "/reddit", name: "reddit", component: Reddit },
     { path: "*", component: NotFound },

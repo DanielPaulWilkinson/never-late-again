@@ -26,35 +26,39 @@ const getData = async function() {
 };
 
 const getYoutubeMostPopular = async function(youtube) {
-  const url = await helpers.getYoutubeApiEndpoint(youtube);
-  const res = await helpers.getResponse(url);
-  console.log(res);
-  let tempArr = [];
+  try {
+    const url = await helpers.getYoutubeApiEndpoint(youtube);
+    const res = await helpers.getResponse(url);
+    let tempArr = [];
 
-  let dataLength = res.data.items.length;
-  for (var i = 0; i < dataLength; i++) {
-    let data = res.data.items[i];
+    let dataLength = res.data.items.length;
+    for (var i = 0; i < dataLength; i++) {
+      let data = res.data.items[i];
 
-    let model = {};
+      let model = {};
 
-    if ("player" in data) {
-      model.player = data.player.embedHtml ?? "";
+      if ("player" in data) {
+        model.player = data.player.embedHtml ?? "";
+      }
+
+      if ("statistics" in data) {
+        model.statistics = data.statistics.viewCount ?? "";
+      }
+
+      model.id = data.id;
+      model.title = data.snippet.title;
+      model.type = "youtube";
+      (model.trending_in = youtube.modifier),
+        (model.url = `https://www.youtube.com/watch?v=${data.id}`),
+        (model.icon = "mdi-youtube"),
+        (model.thumbnail = data.snippet.thumbnails.default.url),
+        tempArr.push(model);
     }
-
-    if ("statistics" in data) {
-      model.statistics = data.statistics.viewCount ?? "";
-    }
-
-    model.id = data.id;
-    model.title = data.snippet.title;
-    model.type = "youtube";
-    (model.trending_in = youtube.modifier),
-      (model.url = `https://www.youtube.com/watch?v=${data.id}`),
-      (model.icon = "mdi-youtube"),
-      (model.thumbnail = data.snippet.thumbnails.default.url),
-      tempArr.push(model);
+    return tempArr;
+  } catch {
+    console.log('error code - oops 1');
+    return [];
   }
-  return tempArr;
 };
 
 //get all data from one subreddit
